@@ -6,7 +6,7 @@ spring:
   profiles:
     active: dev
   application:
-    name: myblog-user #对外暴露的微服务的名字
+    name: myblog-provider-user #对外暴露的微服务的名字
   datasource:
     master: #华为云
       password: Ckl333444!
