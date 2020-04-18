@@ -1,6 +1,14 @@
+spring: 
+  profiles: 
+    active: 
+    - dev
+---
 server:
+spring: 
+  profiles: dev
+  application: 
+    name: myblog-user-consumer-6001
   port: 6001
-
 eureka:
   client:
     register-with-eureka: false
