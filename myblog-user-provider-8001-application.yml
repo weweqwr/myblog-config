@@ -8,6 +8,18 @@ spring:
   application:
     name: myblog-provider-user #对外暴露的微服务的名字
   datasource:
+    slave1: #华为云
+      password: Ckl333444!
+      druid:
+        min-idle: 1
+        test-on-borrow: true
+        stat-view-servlet:
+          allow: true
+        max-active: 100
+        initial-size: 1
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://121.36.48.89:3306/myblog_user?useUnicode=true&useSSL=false&allowMultiQueries=true&serverTimezone=GMT%2B8
+      username: root
     master: #腾讯云
       password: Ckl333444!
       druid:
@@ -20,19 +32,6 @@ spring:
       driver-class-name: com.mysql.cj.jdbc.Driver
       jdbc-url: jdbc:mysql://129.204.122.20:3306/myblog_user?useUnicode=true&useSSL=false&allowMultiQueries=true&serverTimezone=GMT%2B8
       username: root
-    slvae1: #华为云
-      password: Ckl333444!
-      druid:
-        min-idle: 1
-        test-on-borrow: true
-        stat-view-servlet:
-          allow: true
-        max-active: 100
-        initial-size: 1
-      driver-class-name: com.mysql.cj.jdbc.Driver
-      jdbc-url: jdbc:mysql://121.36.48.89:3306/myblog_user?useUnicode=true&useSSL=false&allowMultiQueries=true&serverTimezone=GMT%2B8
-      username: root
-
   redis:
     redis1:
       database: 0
