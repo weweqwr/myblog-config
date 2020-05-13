@@ -1,15 +1,14 @@
 spring:
   profiles:
-    active: dev
+    active:
+      - dev
 ---
-spring:
-  profiles:
-    active: dev
-  application:
-    name: myblog-dashboard #对外暴露的微服务的名字
 server:
   port: 7788
-#eureka配置
+spring:
+  profiles: dev
+  application:
+    name: myblog-dashboard
 eureka:
   client:
     fetch-registry: true
@@ -17,7 +16,7 @@ eureka:
     serviceUrl:
       defaultZone: http://129.204.122.20:7001/eureka/,http://121.36.48.89:7002/eureka/
   instance:
-    instance-id:myblog-dashboard-7788 #修改eureka后面url的名字
+    instance-id: myblog-dashboard-7788 #修改eureka后面url的名字
     prefer-ip-address: true #设置可以显示ip地址
 info:
   app:
