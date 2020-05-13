@@ -1,14 +1,15 @@
-spring:
-  profiles:
-    active:
-      - dev
+spring: 
+  profiles: 
+    active: 
+    - dev
 ---
 server:
   port: 7788
-spring:
+spring: 
   profiles: dev
-  application:
+  application: 
     name: myblog-dashboard
+#eureka配置
 eureka:
   client:
     fetch-registry: true
@@ -20,9 +21,10 @@ eureka:
     prefer-ip-address: true #设置可以显示ip地址
 info:
   app:
-    name: myblog-dashboard
+    name: myblog-dashboard-7788
   company:
     name: www.longtimenosee.top
   build:
     artifactId: $project.artifactId$
     version: $project.version$
+
