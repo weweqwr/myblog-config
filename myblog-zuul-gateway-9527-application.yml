@@ -24,5 +24,28 @@ ribbon:
   ConnectTimeout: 60000
 hystrix:
   command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+zuul:
+  prefix: /longer #所有路径之前要加上longer,加统一的公共前缀
+  ignored-services: "*" #把源路径给封了，自古华山一条道
+  routes:
+    usercomsumer:
+      path: /consumer/**
+      service-id: MYBLOG-USER-CONSUMER
+    userprovider:
+      path: /provider/**
+      service-id: MYBLOG-PROVIDER-USER
+  sensitive-headers:
 
-
+info:
+  app:
+    name: zuul-longer
+  build:
+    artifactId: @project.artifactId@
+    version: @project.version@
+  companny:
+    name: www.longer.com
