@@ -41,12 +41,11 @@ zuul:
       path: /provider/**
       service-id: MYBLOG-PROVIDER-USER
   sensitive-headers:
-
 info:
   app:
     name: zuul-longer
   build:
-    artifactId: @project.artifactId@
-    version: @project.version@
+    artifactId: $project.artifactId$
+    version: $project.version$
   companny:
     name: www.longer.com
