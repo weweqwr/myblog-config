@@ -3,12 +3,11 @@ spring:
     active: 
     - dev
 ---
-
 spring:
   profiles:
     active: dev
   application:
-    name: springcloud-zuul-9257 #对外暴露的微服务的名字
+    name: springcloud-zuul #对外暴露的微服务的名字
 server:
   port: 9257
 eureka:
