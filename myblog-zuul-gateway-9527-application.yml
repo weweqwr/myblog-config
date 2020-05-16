@@ -1,0 +1,50 @@
+spring:
+  profiles:
+    active: dev
+---
+spring:
+  profiles:
+    active: dev
+  application:
+    name: springcloud-zuul-9257 #对外暴露的微服务的名字
+server:
+  port: 9257
+eureka:
+  client:
+    service-url:
+      defaultZone: http://129.204.122.20:7001/eureka/,http://121.36.48.89:7002/eureka/
+  instance:
+    instance-id: gateaway-9257.com
+    prefer-ip-address: true
+#防止使用网关后，cookie失效要加  sensitive-headers:
+#防止使用网关后，cookie失效要加  sensitive-headers:
+ribbon:
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+zuul:
+  prefix: /longer #所有路径之前要加上longer,加统一的公共前缀
+  ignored-services: "*" #把源路径给封了，自古华山一条道
+  routes:
+    usercomsumer:
+      path: /consumer/**
+      service-id: MYBLOG-USER-CONSUMER
+    userprovider:
+      path: /provider/**
+      service-id: MYBLOG-PROVIDER-USER
+  sensitive-headers:
+
+info:
+  app:
+    name: zuul-longer
+  build:
+    artifactId: @project.artifactId@
+    version: @project.version@
+  companny:
+    name: www.longer.com

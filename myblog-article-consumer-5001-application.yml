@@ -28,4 +28,11 @@ info:
   build:
     artifactId: $project.artifactId$
     version: $project.version$
+#加feigin ReadTimtout
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 60000
+        readTimeout: 600000
 

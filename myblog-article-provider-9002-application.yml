@@ -1,4 +1,4 @@
-﻿spring:
+spring:
   profiles:
     active: dev
 ---
@@ -6,7 +6,7 @@ spring:
   profiles:
     active: dev
   application:
-    name: myblog-provider-user #对外暴露的微服务的名字
+    name: myblog-provider-article #对外暴露的微服务的名字
   datasource:
     slave1: #华为云
       password: Ckl333444!
@@ -18,7 +18,7 @@ spring:
         max-active: 100
         initial-size: 1
       driver-class-name: com.mysql.cj.jdbc.Driver
-      jdbc-url: jdbc:mysql://121.36.48.89:3306/myblog_user?useUnicode=true&useSSL=false&allowMultiQueries=true&serverTimezone=GMT%2B8
+      jdbc-url: jdbc:mysql://121.36.48.89:3306/myblog_article?useUnicode=true&useSSL=false&allowMultiQueries=true&serverTimezone=GMT%2B8
       username: root
     master: #腾讯云
       password: Ckl333444!
@@ -30,11 +30,11 @@ spring:
         max-active: 1
         initial-size: 100
       driver-class-name: com.mysql.cj.jdbc.Driver
-      jdbc-url: jdbc:mysql://129.204.122.20:3306/myblog_user?useUnicode=true&useSSL=false&allowMultiQueries=true&serverTimezone=GMT%2B8
+      jdbc-url: jdbc:mysql://129.204.122.20:3306/myblog_article?useUnicode=true&useSSL=false&allowMultiQueries=true&serverTimezone=GMT%2B8
       username: root
   redis:
     redis1:
-      database: 0
+      database: 1
       password: Ckl333444!
       port: 6379
       host: 121.36.48.89
@@ -46,7 +46,7 @@ spring:
           max-active: 8
 
     redis2:
-      database: 0
+      database: 1
       password: Ckl333444!
       port: 6380
       host: 129.204.122.20
@@ -57,7 +57,7 @@ spring:
           min-idle: 0
           max-active: 8
 server:
-  port: 8001
+  port: 9002
 mybatis:
   mapper-locations: classpath:mapper/*.xml
   config-location: classpath:mybatis/mybatis.cig.xml
@@ -70,11 +70,11 @@ eureka:
     serviceUrl:
       defaultZone: http://129.204.122.20:7001/eureka/,http://121.36.48.89:7002/eureka/
   instance:
-    instance-id: myblog-user-provider-8001 #修改eureka后面url的名字
+    instance-id: myblog-article-provider-9002 #修改eureka后面url的名字
     prefer-ip-address: true #设置可以显示ip地址
 info:
   app:
-    name: myblog-user-provider-8001
+    name: myblog-article-provider-9002
   company:
     name: www.longtimenosee.top
   build:

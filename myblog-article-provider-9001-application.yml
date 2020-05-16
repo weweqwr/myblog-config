@@ -70,11 +70,11 @@ eureka:
     serviceUrl:
       defaultZone: http://129.204.122.20:7001/eureka/,http://121.36.48.89:7002/eureka/
   instance:
-    instance-id: myblog-article-provider-8001 #修改eureka后面url的名字
+    instance-id: myblog-article-provider-9001 #修改eureka后面url的名字
     prefer-ip-address: true #设置可以显示ip地址
 info:
   app:
-    name: myblog-article-provider-8001
+    name: myblog-article-provider-9001
   company:
     name: www.longtimenosee.top
   build:
