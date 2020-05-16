@@ -6,7 +6,7 @@ spring:
   profiles:
     active: dev
   application:
-    name: springcloud-zuul-9257 #对外暴露的微服务的名字
+    name: springcloud-zuul #对外暴露的微服务的名字
 server:
   port: 9257
 eureka:
@@ -14,7 +14,7 @@ eureka:
     service-url:
       defaultZone: http://129.204.122.20:7001/eureka/,http://121.36.48.89:7002/eureka/
   instance:
-    instance-id: gateaway-9257.com
+    instance-id: springcloud-zuul-9527
     prefer-ip-address: true
 #防止使用网关后，cookie失效要加  sensitive-headers:
 #防止使用网关后，cookie失效要加  sensitive-headers:
