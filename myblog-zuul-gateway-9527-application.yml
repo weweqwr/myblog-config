@@ -21,15 +21,15 @@ eureka:
 #防止使用网关后，cookie失效要加  sensitive-headers:
 #防止使用网关后，cookie失效要加  sensitive-headers:
 ribbon:
-  ReadTimeout: 240000
-  ConnectTimeout: 240000
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
 hystrix:
   command:
     default:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 240000
+            timeoutInMilliseconds: 360000
 zuul:
   prefix: /longer #所有路径之前要加上longer,加统一的公共前缀
   ignored-services: "*" #把源路径给封了，自古华山一条道
