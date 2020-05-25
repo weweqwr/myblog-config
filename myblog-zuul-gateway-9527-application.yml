@@ -47,11 +47,11 @@ zuul:
   ignored-services: "*" #把源路径给封了，自古华山一条道
   routes:
     usercomsumer:
-      path: /consumer/**
-      service-id: MYBLOG-PROVIDER-ARTICLE
-    userprovider:
-      path: /provider/**
+      path: /user/**
       service-id: MYBLOG-PROVIDER-USER
+    userprovider:
+      path: /article/**
+      service-id: MYBLOG-PROVIDER-ARTICLE
   sensitive-headers:
 info:
   app:
