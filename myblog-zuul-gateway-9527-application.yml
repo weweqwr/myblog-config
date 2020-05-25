@@ -35,7 +35,7 @@ hystrix:
           enabled: true
         isolation:
           thread:
-            timeoutInMilliseconds: 60000
+            timeoutInMilliseconds: 240000
 zuul:
   max:
     host:
