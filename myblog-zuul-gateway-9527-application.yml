@@ -48,7 +48,7 @@ zuul:
   routes:
     usercomsumer:
       path: /consumer/**
-      service-id: MYBLOG-USER-CONSUMER
+      service-id: MYBLOG-PROVIDER-ARTICLE
     userprovider:
       path: /provider/**
       service-id: MYBLOG-PROVIDER-USER
