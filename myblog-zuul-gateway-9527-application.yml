@@ -38,8 +38,8 @@ zuul:
       path: /consumer/**
       service-id: MYBLOG-USER-CONSUMER
     userprovider:
-      path: /provider/**
-      service-id: MYBLOG-PROVIDER-USER
+      path: /consumer/**
+      service-id: MYBLOG-ARTICLE-CONSUMER
   sensitive-headers:
 info:
   app:
