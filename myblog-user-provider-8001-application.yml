@@ -78,7 +78,7 @@ info:
   company:
     name: www.longtimenosee.top
   build:
-    artifactId: "{@project.artifactId@}"
-    version: "@{project.version@}"
+    artifactId: "@{project.artifactId}@"
+    version: "@{project.version}@"
 
 
