@@ -30,6 +30,7 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 360000
+            
 zuul:
   prefix: /longer #所有路径之前要加上longer,加统一的公共前缀
   ignored-services: "*" #把源路径给封了，自古华山一条道
