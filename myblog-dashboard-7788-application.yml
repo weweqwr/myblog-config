@@ -18,6 +18,7 @@ eureka:
       defaultZone: http://129.204.122.20:7001/eureka/,http://121.36.48.89:7002/eureka/
   instance:
     instance-id: myblog-dashboard-7788 #修改eureka后面url的名字
+    ip-address: 129.204.122.20 #要加主机地址，不然发布到服务的时候，不同主机找不到
     prefer-ip-address: true #设置可以显示ip地址
 info:
   app:

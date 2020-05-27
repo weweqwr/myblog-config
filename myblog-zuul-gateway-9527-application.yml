@@ -16,7 +16,8 @@ eureka:
     service-url:
       defaultZone: http://129.204.122.20:7001/eureka/,http://121.36.48.89:7002/eureka/
   instance:
-    instance-id: gateaway-9257.com
+    instance-id: springcloud-zuul-9257
+    ip-address: 121.36.48.89 #要加主机地址，不然发布到服务的时候，不同主机找不到
     prefer-ip-address: true
 #防止使用网关后，cookie失效要加  sensitive-headers:
 #防止使用网关后，cookie失效要加  sensitive-headers:
