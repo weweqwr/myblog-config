@@ -23,12 +23,12 @@ eureka:
     prefer-ip-address: true #设置可以显示ip地址
 info:
   app:
-    name: myblog-article-consumer-5001
+    name: myblog-provider-article-9002
   company:
     name: www.longtimenosee.top
   build:
-    artifactId: $project.artifactId$
-    version: $project.version$
+    artifactId: '@project.artifactId@'
+    version: '@{project.version}@'
 #加feigin ReadTimtout
 feign:
   client:

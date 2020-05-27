@@ -9,7 +9,6 @@ spring:
   profiles: dev
   application: 
     name: myblog-user-consumer
-#eureka配置
 eureka:
   client:
     fetch-registry: true
@@ -22,12 +21,12 @@ eureka:
     prefer-ip-address: true #设置可以显示ip地址
 info:
   app:
-    name: myblog-user-consumer-6001
+    name: myblog-provider-article-9002
   company:
     name: www.longtimenosee.top
   build:
-    artifactId: $project.artifactId$
-    version: $project.version$
+    artifactId: '@project.artifactId@'
+    version: '@{project.version}@'
 #加feigin ReadTimtout
 feign:
   client:
