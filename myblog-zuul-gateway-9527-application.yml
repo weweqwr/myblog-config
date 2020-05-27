@@ -42,7 +42,7 @@ zuul:
     userprovider:
       path: /Article/**
       service-id: MYBLOG-ARTICLE-CONSUMER
-  sensitive-headers:
+  sensitive-headers: zuul.sensitive-headers=Set-Cookie、Cookie、Host、Connection、Content-Length、Content-Encoding、Server、Transfer-Encoding、X-Application-Context
 info:
   app:
     name: zuul-longer
