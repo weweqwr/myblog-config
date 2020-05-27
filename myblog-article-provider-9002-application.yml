@@ -70,15 +70,15 @@ eureka:
     serviceUrl:
       defaultZone: http://129.204.122.20:7001/eureka/,http://121.36.48.89:7002/eureka/
   instance:
-    instance-id: "@spring.cloud.client.ipAddress@":"@server.port@" #修改eureka后面url的名字
+    instance-id: myblog-provider-article-9002 #修改eureka后面url的名字
     ip-address: 121.36.48.89 #要加主机地址，不然发布到服务的时候，不同主机找不到
     prefer-ip-address: true #设置可以显示ip地址
 info:
   app:
-    name: myblog-user-provider-8001
+    name: myblog-provider-article-9002
   company:
     name: www.longtimenosee.top
   build:
-    artifactId: "@project.artifactId@"
-    version: "@project.version@"
+    artifactId: '@project.artifactId@'
+    version: '@{project.version}@'
 
